@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style>
+#barcode, #disc_type, #paypal, .issues{
+ text-align: center;
+}
+
+
+* {
+   margin: 0;
+   padding: 0;
+  }
+  .imgbox {
+   display: grid;
+   height: 100%;
+  }
+  .center-fit {
+   max-width: 100%;
+   max-height: 100vh;
+   margin: auto;
+  }
+
+#cgenerate{
+text-align:center;
+margin-bottom: 15px;
+ 
+}
+
+form {
+  text-align: center;
+}
+#cgenerate  a{
+padding: 5px 5px 5px 5px;
+
+font: bold 13px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+
+}
+
+.bottom_line{
+ text-align:right;
+ font-style: italic;
+    padding-right: 3px;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="lib.js"></script>
+</head>
+<body>
+<script>
+
+
+//Assign handlers immediately after making the request,
+//and remember the jqxhr object for this request
+var x, i;
+
+
+var Random = 0
+var Begin = 0
+var Second = 0
+var string
+
+
+$.getJSON( "GetCodes", function(data) {
+	
+	
+
+
+for (i in data.Values) {
+   
+ 
+    
+    
+    
+    var a = document.createElement('a');
+    var linkText = document.createTextNode(data.Values[i].name);
+    a.class= "cgenerate";
+    a.appendChild(linkText);
+    a.title = data.Values[i].name;
+    a.href = "javascript:myFunction('"+data.Values[i].code[0]+"','"+data.Values[i].code[1]+"','"+data.Values[i].name+"')";
+    document.getElementById('cgenerate').appendChild(a);
+    
+
+}
+
+});
+
+
+
+console.log("log " +x);
+
+function calculate(){
+	//alert("did somthing");
+}
+
+
+function myFunction(a,b,c) {
+	
+	document.getElementById('disc_type').innerHTML  = c
+	//alert( a + " "+ b );
+
+	Random = Math.floor(Math.random()*2)
+	
+	
+	if (Random == "0")
+		{Begin = 4700000000}
+		else
+			{Begin = 4700000000}
+	
+	Random = Math.floor(Math.random()*40000) + 1
+	Second = Begin + Random
+	
+	Random = Math.floor(Math.random()*2)
+	if (Random == "1")
+		{Begin = a}
+		else
+			{Begin = b}
+	var res = Second.toString() + Begin.toString();
+
+	var string = res
+	var tempa = parseInt(string.substring(13,14))
+	var tempb = parseInt(string.substring(11,12))
+	var tempc = parseInt(string.substring(9,10))
+	var tempd = parseInt(string.substring(7,8))
+	var tempe = parseInt(string.substring(5,6))
+	var tempf = parseInt(string.substring(3,4))
+	var tempg = parseInt(string.substring(1,2))
+
+	var even = tempa + tempb + tempc + tempd + tempe + tempf + tempg
+	var evenf = even*3
+
+	
+	var tempa = parseInt(string.substring(12,13))
+	var tempb = parseInt(string.substring(10,11))
+	var tempc = parseInt(string.substring(8,9))
+	var tempd = parseInt(string.substring(6,7))
+	var tempe = parseInt(string.substring(4,5))
+	var tempf = parseInt(string.substring(2,3))
+	var tempg = parseInt(string.substring(0,1))
+	
+	var odd = tempa + tempb + tempc + tempd + tempe + tempf + tempg
+	var oddf = odd
+
+	var eant = (evenf + oddf) % 10
+	var eanf = (10 - eant) % 10
+
+	var final = res.toString() + eanf.toString();
+	//alert(final);
+
+	//document.getElementById("disbox").value = final
+	exampleInit(final);
+	
+}
+
+
+</script>
+
+
+<script type="text/javascript">
+        function exampleInit(final) {
+            barcode({
+                renderToID : 'barcode',
+                string : final,
+                barWidth : 1.5,
+                height : '80',
+                showText : true
+            });
+        }
+        
+    </script>
+ <div class="imgbox" >
+ <img src="Lowes.PNG" alt="Lowes" class="center-fit">
+ </div>
+    <div id = "disc_type"> </div>
+    <div id="barcode" style="padding: 2px; "></div>
+    <div id = "cgenerate">
+    </div>
+    <div id = "paypal">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2HVWZQWW3SCH4">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+     
+    </div>
+    
+    <div class = "bottom_line">Donate to Help Sustain... </div>
+    <div class = "issues"><a href="mailto:anandsagarsethi@gmail.com">Having issues! click me</a></div>
+    
+
+</body>
+</html>

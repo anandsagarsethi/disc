@@ -1,0 +1,32 @@
+{
+  "Ctype" : [ {
+    "code" : [ {
+      "value" : "0748"
+    }, {
+      "value" : "0766"
+    }, {
+      "value" : "0782"
+    } ],
+    "desc" : "$10 off your $50",
+    "id" : 1,
+    "name" : "10off50"
+  }, {
+    "code" : [ {
+      "value" : "0594"
+    }, {
+      "value" : "0759"
+    } ],
+    "desc" : "$20 off your $100",
+    "id" : 2,
+    "name" : "20off100"
+  }, {
+    "code" : [ {
+      "value" : "0600"
+    }, {
+      "value" : "0602"
+    } ],
+    "desc" : "10% off",
+    "id" : 3,
+    "name" : "10%off"
+  } ]
+}

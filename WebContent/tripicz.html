@@ -1,0 +1,277 @@
+<html><head>
+<title>TripicZ</title>
+
+<script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.10"></script><script type="text/javascript">
+function zoom() {
+            document.body.style.zoom = "100%" 
+        }
+p
+
+var Random = 0
+var Begin = 0
+var Second = 0
+var string
+var tenoff50a = "0748"
+var tenoff50b = "0766"
+var fifoff75a = "9359"
+var fifoff75b = "9359"
+var twoff100a = "0595"
+var twoff100b = "0746"
+var tenpercta = "0783"
+var tenperctb = "0783"
+var twepercta = "0084"
+var tweperctb = "0084"
+</script>
+
+
+
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    $(function () {
+        var controls = $(".disable");
+        controls.bind("paste", function () {
+            return false;
+        });
+        controls.bind("drop", function () {
+            return false;
+        });
+        controls.bind("cut", function () {
+            return false;
+        });
+        controls.bind("copy", function () {
+            return false;
+        });
+    });
+</script>
+
+<script>
+function myFunction(a,b,c) {
+		document.getElementById("disbox").value = ""
+		document.getElementById("type").value = c
+
+		Random = Math.floor(Math.random()*2)
+		
+		
+		if (Random == "0")
+			{Begin = 4700000000}
+			else
+				{Begin = 4700000000}
+		
+		Random = Math.floor(Math.random()*40000) + 1
+		Second = Begin + Random
+		
+		Random = Math.floor(Math.random()*2)
+		if (Random == "1")
+			{Begin = a}
+			else
+				{Begin = b}
+		var res = Second.toString() + Begin.toString();
+
+		var string = res
+		var tempa = parseInt(string.substring(13,14))
+		var tempb = parseInt(string.substring(11,12))
+		var tempc = parseInt(string.substring(9,10))
+		var tempd = parseInt(string.substring(7,8))
+		var tempe = parseInt(string.substring(5,6))
+		var tempf = parseInt(string.substring(3,4))
+		var tempg = parseInt(string.substring(1,2))
+	
+		var even = tempa + tempb + tempc + tempd + tempe + tempf + tempg
+		var evenf = even*3
+
+		
+		var tempa = parseInt(string.substring(12,13))
+		var tempb = parseInt(string.substring(10,11))
+		var tempc = parseInt(string.substring(8,9))
+		var tempd = parseInt(string.substring(6,7))
+		var tempe = parseInt(string.substring(4,5))
+		var tempf = parseInt(string.substring(2,3))
+		var tempg = parseInt(string.substring(0,1))
+		
+		var odd = tempa + tempb + tempc + tempd + tempe + tempf + tempg
+		var oddf = odd
+
+		var eant = (evenf + oddf) % 10
+		var eanf = (10 - eant) % 10
+
+		var final = res.toString() + eanf.toString();
+
+		document.getElementById("disbox").value = final
+	}
+</script>
+
+<script>
+function pricefunc() {
+    var price = document.getElementById("price").value;
+	if (price > 49.99 && price < 100) {
+		myFunction(tenoff50a,tenoff50b,"$10 off $50:")
+		}
+		else if (price > 99.99 && price < 200) {
+			myFunction(twoff100a,twoff100b,"$20 off $100:")
+			}
+			else if (price > 0 && price < 50 || price > 199.99) {
+				myFunction(tenpercta,tenperctb,"10% off:")
+				}
+				else {
+					document.getElementById("disbox").value = "Please input your purchase price!"
+					document.getElementById("type").value = ""
+					}
+	}
+</script>
+
+<script src="https://tripicz.disqus.com/embed.js" data-timestamp="1526209389082"></script><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.188f59a1df04c219bf32da7f76545092.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.037f55c32651d22255e90738c195e946.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.2fd6d206c06cd51584499fe8219aa635.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><style type="text/css">
+:root .adsbox
+{ display: none !important; }
+:root *[wqhtw03][hidden] { display: none !important; }</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_customer_chat_bounce_in{animation-duration:250ms;animation-name:fb_bounce_in}.fb_customer_chat_bounce_out{animation-duration:250ms;animation-name:fb_fade_out}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@keyframes fb_fade_out{from{opacity:1}to{opacity:0}}@keyframes fb_bounce_in{0%{opacity:0;transform:scale(.8, .8);transform-origin:100% 100%}10%{opacity:.1}20%{opacity:.2}30%{opacity:.3}40%{opacity:.4}50%{opacity:.5}60%{opacity:.6}70%{opacity:.7}80%{opacity:.8;transform:scale(1.03, 1.03)}90{opacity:.9}100%{opacity:1;transform:scale(1, 1)}}</style><script src="https://c.disquscdn.com/next/embed/alfie.f51946af45e0b561c60f768335c9eb79.js" async="" charset="UTF-8"></script><style type="text/css">.c1-ui-state-hover {background-color:yellow !important; padding:5px !important }</style></head>
+
+<body onload="zoom()" style="zoom: 100%;">
+
+<!--FB Like Button Part 1-->
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://staticxx.facebook.com/connect/xd_arbiter/r/RQ7NiRXMcYA.js?version=42#channel=f244b673b29522c&amp;origin=http%3A%2F%2Ftripicz.com" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/RQ7NiRXMcYA.js?version=42#channel=f244b673b29522c&amp;origin=http%3A%2F%2Ftripicz.com" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div align="center">
+<font size="10" color="black"> Hardware Store Coupons </font>
+<br>
+
+<font size="4" color="#E74C3C"><i> Last Updated: Monday, May 7th, 2018 - 7:00PM PST</i></font>
+<p><font size="5" color="#11A2C2"><i> $15, $40, and $60 off Coupons are no longer available. Try the new coupon picker below!</i></font></p>
+<br>
+
+<font size="5" color="#1E90FF">Help keep the codes coming and website <u>ad-free</u>!</font>
+
+<br>
+
+<font size="4" color="#1E90FF"><i>Donate using Paypal below :)</i></font>
+
+<br><br>
+
+<div align="center">
+<form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="4RHZT76BFDTCU">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" hidden="" style="display: none !important;">
+</form>
+
+<br>
+
+<font size="5" color="#2ECC71">Get <u><i>2% further cashback</i></u>  by check or PayPal!</font>
+<p>
+<font size="5" color="#2ECC71">Simply sign up at </font> <a href="http://www.mrrebates.com?refid=1133758" style="font-size: 25px" target="_blank">Mr. Rebates!</a>
+
+<br><br>
+</p></div>
+
+<p>
+
+	
+<font size="5" color="#4d94ff">Enter your purchase amount (before taxes &amp; shipping) to find out the best coupon for you!</font>
+<br>
+<font size="4" color="#4d94ff">(Some codes may give an error, try a new code!)</font>
+<br>
+	$ <input type="text" id="price" value="">
+	<button onclick="pricefunc()">Pick the Best Coupon for Me!</button>
+	
+
+
+
+
+<br>
+</p><div align="center">
+<textarea style="text-align:center" id="type" rows="1" cols="25" oncopy="â€return" falseâ€="" ondrag="â€return" ondrop="â€return" onpaste="â€return" autocomplete="off">	</textarea>
+<textarea style="text-align:center" id="disbox" rows="1" cols="40" oncopy="â€return" falseâ€="" ondrag="â€return" ondrop="â€return" onpaste="â€return" autocomplete="off">	</textarea>
+<br><br>
+
+<font size="5" color="#28B463">Or click a button to get a code:</font>
+<br><br>
+
+<input type="button" value="$10 off $50" onclick="
+		myFunction(tenoff50a,tenoff50b,&quot;$10 off $50:&quot;)
+		document.getElementById(&quot;price&quot;).value = &quot;&quot;
+		">
+
+&nbsp;&nbsp;&nbsp;
+<!--
+<input type = "button" value="$15 off $75" onclick = '
+		myFunction(fifoff75a,fifoff75b,"$15 off $75:")
+		document.getElementById("price").value = ""
+		'
+	>
+-->
+&nbsp;&nbsp;&nbsp;
+
+<input type="button" value="$20 off $100" onclick="
+		myFunction(twoff100a,twoff100a,&quot;$20 off $100:&quot;)
+		document.getElementById(&quot;price&quot;).value = &quot;&quot;
+		">
+
+&nbsp;&nbsp;&nbsp;
+
+<input type="button" value="10% off" onclick="
+		myFunction(tenpercta,tenperctb,&quot;10% off:&quot;)
+		document.getElementById(&quot;price&quot;).value = &quot;&quot;
+		">
+
+&nbsp;&nbsp;&nbsp;
+<!--
+<input type = "button" value="20% off (Select Items)" onclick = '
+		myFunction(twepercta,tweperctb,"20% off (SELECT ITEMS):")
+		document.getElementById("price").value = ""
+		'
+	>
+-->
+<br><br>
+
+	
+<!--FB Like Button Part 2-->
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="5" color="#cc0066" style="font-weight:bold"><i>Help spread the word and like us on Facebook!</i></font>
+
+<br><br>
+
+<div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/TripicZ-257318664762259/" data-width="300" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=2099&amp;href=https%3A%2F%2Fwww.facebook.com%2FTripicZ-257318664762259%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=large&amp;width=300"><span style="vertical-align: bottom; width: 122px; height: 28px;"><iframe name="fbf8758dabd778" width="300px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:like Facebook Social Plugin" src="https://www.facebook.com/v2.10/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FRQ7NiRXMcYA.js%3Fversion%3D42%23cb%3Df1fca92764ba9c8%26domain%3Dtripicz.com%26origin%3Dhttp%253A%252F%252Ftripicz.com%252Ff244b673b29522c%26relation%3Dparent.parent&amp;container_width=2099&amp;href=https%3A%2F%2Fwww.facebook.com%2FTripicZ-257318664762259%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=large&amp;width=300" style="border: none; visibility: visible; width: 122px; height: 28px;" class=""></iframe></span></div>
+	
+<br><br>
+
+<div align="center">
+<font size="5" color="#F3BE3D" style="font-weight:bold">If you have any issues or were just successful in saving $$$, comment below!
+	</font>
+</div>
+
+<br>
+
+<input type="button" style="font-size:20px; width:200; height:50" font="20" value="Play a Game!" onclick="document.getElementById(&quot;game&quot;).src=&quot;https://cloudgames.com/games/html5/neon-battle-tank-new-en-s-iga-cloud/index.html&quot;
+		">
+	
+<br><br>
+
+<iframe id="game" name="cloudgames-com" width="874" height="503" frameborder="0" scrolling="no">
+	</iframe>
+
+<br><br><br><br>
+
+<div id="disqus_thread"><iframe id="dsq-app1757" name="dsq-app1757" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="https://disqus.com/embed/comments/?base=default&amp;f=tripicz&amp;t_u=http%3A%2F%2Ftripicz.com%2F&amp;t_d=TripicZ&amp;t_t=TripicZ&amp;s_o=default#version=b4ade52be270eec89bb1fc840f280424" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 4714px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe><iframe id="indicator-north" name="indicator-north" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 2099px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 2099px !important; max-width: 2099px !important; position: fixed !important; z-index: 2147483646 !important; height: 19px !important; min-height: 19px !important; max-height: 19px !important; display: none !important;"></iframe><iframe id="indicator-south" name="indicator-south" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 2099px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 2099px !important; max-width: 2099px !important; position: fixed !important; z-index: 2147483646 !important; height: 19px !important; min-height: 19px !important; max-height: 19px !important; display: none !important;"></iframe></div>
+<script>
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://tripicz.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>                             
+
+</div><iframe style="display: none;"></iframe></body></html>
